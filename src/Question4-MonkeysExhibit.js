@@ -5,18 +5,20 @@
  */
 
 import React from "react";
+class MonkeysExhibit extends React.Component {
 
-function MonkeysExhibit(props) {
-  return (
-    <section className="monkeys">
-      <h2>Latin name: {props.latinName}</h2>
-      <ul>
-        {props.commonSpecies.map((speciesName, index) => {
-          return <li key={index}>{speciesName}</li>;
-        })}
-      </ul>
-    </section>
-  );
+  render() {
+    return (
+      <section className="monkeys">
+        <h2>Latin name: {this.props.latinName}</h2>
+        <ul>
+          {this.props.commonSpecies.map((speciesName, index) => {
+            return <li key={index}>{speciesName}</li>;
+          })}
+        </ul>
+      </section>
+    );
+  }
 }
 
 export default MonkeysExhibit;
